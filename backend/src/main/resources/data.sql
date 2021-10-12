@@ -31,3 +31,6 @@ INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) 
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Módulo 1: Introdução', 'Introdução ao Curso', 1, 'https://i.gyazo.com/bb3fc7214669e747b00ddf353913589a.png', 1, null);
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Módulo 2: Contiuação da introdução', 'Continuação', 2, 'https://i.gyazo.com/bb3fc7214669e747b00ddf353913589a.png', 1, 1);
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Módulo 3: Finalização da continuação', 'Finalizando', 3, 'https://i.gyazo.com/bb3fc7214669e747b00ddf353913589a.png', 1, 2);
+
+INSERT INTO tb_enrollment( user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES ( 1, 1,TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', null, true, false);
+INSERT INTO tb_enrollment( user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES ( 2, 1,TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', null, true, false);

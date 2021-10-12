@@ -24,6 +24,9 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user")
     private Set<Notification> notifications = new HashSet<>();
 
+    @OneToMany(mappedBy = "id.user")
+    private Set<Enrollment> enrollments = new HashSet<>();
+
     public User() {
     }
 

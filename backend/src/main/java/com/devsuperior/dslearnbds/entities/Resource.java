@@ -20,7 +20,6 @@ public class Resource implements Serializable {
     private Integer position;
     private String imgUri;
     private Integer type;
-    private String externalLink;
 
     @ManyToOne
     @JoinColumn(name = "offer_id")
@@ -32,7 +31,7 @@ public class Resource implements Serializable {
     public Resource() {
     }
 
-    public Resource(Long id, String title, String description, Integer position, String imgUri, ResourceType type, Offer offer, String externalLink) {
+    public Resource(Long id, String title, String description, Integer position, String imgUri, ResourceType type, Offer offer) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -40,7 +39,6 @@ public class Resource implements Serializable {
         this.imgUri = imgUri;
         setType(type);
         this.offer = offer;
-        this.externalLink = externalLink;
     }
 
     public Long getId() {
@@ -61,14 +59,6 @@ public class Resource implements Serializable {
 
     public void setOffer(Offer offer) {
         this.offer = offer;
-    }
-
-    public String getExternalLink() {
-        return externalLink;
-    }
-
-    public void setExternalLink(String externalLink) {
-        this.externalLink = externalLink;
     }
 
     public void setTitle(String title) {

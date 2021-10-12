@@ -25,6 +25,9 @@ public class Offer implements Serializable {
     @OneToMany(mappedBy = "offer")
     private Set<Resource> resources = new HashSet<>();
 
+    @OneToMany(mappedBy = "id.offer")
+    private Set<Enrollment> enrollments = new HashSet<>();
+
     public Offer() {
     }
 

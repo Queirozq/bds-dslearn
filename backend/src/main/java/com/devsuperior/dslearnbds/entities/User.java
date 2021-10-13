@@ -41,6 +41,14 @@ public class User implements Serializable {
         return id;
     }
 
+    public Set<Notification> getNotifications() {
+        return notifications;
+    }
+
+    public Set<Enrollment> getEnrollments() {
+        return enrollments;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }

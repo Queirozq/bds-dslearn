@@ -40,6 +40,11 @@ public class Offer implements Serializable {
         this.endMoment = endMoment;
         this.course = course;
     }
+
+    public Set<Enrollment> getEnrollments() {
+        return enrollments;
+    }
+
     public Long getId() {
         return id;
     }

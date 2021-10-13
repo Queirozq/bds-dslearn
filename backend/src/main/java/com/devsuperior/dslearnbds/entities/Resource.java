@@ -45,6 +45,10 @@ public class Resource implements Serializable {
         return id;
     }
 
+    public Set<Section> getSections() {
+        return sections;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }

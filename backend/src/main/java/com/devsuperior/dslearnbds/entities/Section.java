@@ -2,7 +2,9 @@ package com.devsuperior.dslearnbds.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_section")
@@ -23,6 +25,9 @@ public class Section implements Serializable {
     @ManyToOne
     @JoinColumn(name = "prerequisite_id")
     private Section prerequisite;
+
+    @OneToMany(mappedBy = "section")
+    private Set<Lesson> lessons = new HashSet<>();
 
 
     public Section() {
@@ -48,6 +53,10 @@ public class Section implements Serializable {
 
     public String getTitle() {
         return title;
+    }
+
+    public Set<Lesson> getLessons() {
+        return lessons;
     }
 
     public Section getPrerequisite() {

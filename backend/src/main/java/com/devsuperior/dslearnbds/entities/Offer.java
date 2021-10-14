@@ -3,9 +3,7 @@ package com.devsuperior.dslearnbds.entities;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "tb_offer")
@@ -30,6 +28,9 @@ public class Offer implements Serializable {
     @OneToMany(mappedBy = "id.offer")
     private Set<Enrollment> enrollments = new HashSet<>();
 
+    @OneToMany(mappedBy = "offer")
+    private List<Topic> topics = new ArrayList<>();
+
     public Offer() {
     }
 
@@ -43,6 +44,10 @@ public class Offer implements Serializable {
 
     public Set<Enrollment> getEnrollments() {
         return enrollments;
+    }
+
+    public List<Topic> getTopics() {
+        return topics;
     }
 
     public Long getId() {

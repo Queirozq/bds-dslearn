@@ -42,7 +42,25 @@ INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 2 do capitulo'
 INSERT into tb_content(id, text_Content, video_Uri) VALUES (2,'','https://www.youtube.com/watch?v=guvGGHzsK3A');
 
 INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 3 do capitulo', 3, 1);
-INSERT into tb_content(id, text_Content, video_Uri) VALUES (3,'','https://www.youtube.com/watch?v=guvGGHzsK3A');
+INSERT INTO tb_content(id, text_Content, video_Uri) VALUES (3,'','https://www.youtube.com/watch?v=guvGGHzsK3A');
 
 INSERT INTO tb_lesson (title, position, section_id) VALUES ('Tarefa do capitulo 1', 4, 1);
 INSERT INTO tb_task (id, description, question_Count, approval_Count, weight, due_Date) VALUES (4, 'Tarefa', 5, 4, 1.0, TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z');
+
+INSERT INTO tb_deliver(correct_Count, feedback, moment, status, uri, user_id, offer_id, lesson_id) VALUES(5, 'acertou bem',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 2,'https://i.gyazo.com/bb3fc7214669e747b00ddf353913589a.png', 1, 1,4);
+
+INSERT INTO tb_topic(title, body, moment, author_id, lesson_id, offer_id) VALUES ('duvida 1', 'preciso de ajuda',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 1, 1, 1);
+INSERT INTO tb_topic(title, body, moment, author_id, lesson_id, offer_id) VALUES ('duvida 2', 'preciso de ajuda',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 2, 2, 1);
+INSERT INTO tb_topic(title, body, moment, author_id, lesson_id, offer_id) VALUES ('duvida 3', 'preciso de ajuda',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 1, 2, 1);
+INSERT INTO tb_topic(title, body, moment, author_id, lesson_id, offer_id) VALUES ('duvida 4', 'preciso de ajuda',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 2, 3, 1);
+INSERT INTO tb_topic(title, body, moment, author_id, lesson_id, offer_id) VALUES ('duvida 5', 'preciso de ajuda',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 1, 3, 1);
+INSERT INTO tb_topic(title, body, moment, author_id, lesson_id, offer_id) VALUES ('duvida 6', 'preciso de ajuda',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 2, 4, 1);
+
+INSERT INTO tb_topic_likes(topic_id, user_id) VALUES (1, 2);
+INSERT INTO tb_topic_likes(topic_id, user_id) VALUES (2, 1);
+
+INSERT INTO tb_reply(body, moment, topic_id, author_id) VALUES ('joga fora',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 1, 2);
+INSERT INTO tb_reply(body, moment, topic_id, author_id) VALUES ('joguei mano',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 1, 1);
+
+
+INSERT INTO tb_reply_likes (reply_id, user_id) VALUES (1,1);

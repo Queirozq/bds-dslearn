@@ -129,4 +129,13 @@ public class User implements Serializable, UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    public boolean hasRole(String username){
+        for(Role role : roles){
+            if(role.getAuthority().equals(username)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

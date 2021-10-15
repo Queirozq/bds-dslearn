@@ -9,10 +9,7 @@ INSERT INTO tb_role (authority) VALUES ('ROLE_INSTRUCTOR');
 INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
 
 INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
-INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
-INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
-INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
 
 INSERT INTO tb_course (name, img_Uri, img_Gray_Uri) VALUES ('Bootcamp HTML', 'https://cdn.pixabay.com/photo/2018/03/22/10/55/training-course-3250007_1280.jpg', 'https://upload.wikimedia.org/wikipedia/commons/1/1f/Switch-course-book-grey.svg');
@@ -47,7 +44,7 @@ INSERT INTO tb_content(id, text_Content, video_Uri) VALUES (3,'','https://www.yo
 INSERT INTO tb_lesson (title, position, section_id) VALUES ('Tarefa do capitulo 1', 4, 1);
 INSERT INTO tb_task (id, description, question_Count, approval_Count, weight, due_Date) VALUES (4, 'Tarefa', 5, 4, 1.0, TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z');
 
-INSERT INTO tb_deliver(correct_Count, feedback, moment, status, uri, user_id, offer_id, lesson_id) VALUES(5, 'acertou bem',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 2,'https://i.gyazo.com/bb3fc7214669e747b00ddf353913589a.png', 1, 1,4);
+INSERT INTO tb_deliver(correct_Count, feedback, moment, status, uri, user_id, offer_id, lesson_id) VALUES(null, null,TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 0,'https://i.gyazo.com/bb3fc7214669e747b00ddf353913589a.png', 1, 1,4);
 
 INSERT INTO tb_topic(title, body, moment, author_id, lesson_id, offer_id) VALUES ('duvida 1', 'preciso de ajuda',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 1, 1, 1);
 INSERT INTO tb_topic(title, body, moment, author_id, lesson_id, offer_id) VALUES ('duvida 2', 'preciso de ajuda',TIMESTAMP WITH TIME ZONE '2021-11-11T10:00:00Z', 2, 2, 1);

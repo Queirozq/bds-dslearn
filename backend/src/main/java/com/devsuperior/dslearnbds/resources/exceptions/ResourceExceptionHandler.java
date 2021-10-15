@@ -42,13 +42,13 @@ public class ResourceExceptionHandler {
     }
 
     @ExceptionHandler(ForbiddenException.class)
-    public ResponseEntity<OAuthCustomError> OAuthErrorForbidden(ForbiddenException e, HttpServletRequest request){
+    public ResponseEntity<OAuthCustomError> OAuthErrorForbidden(ForbiddenException e){
         OAuthCustomError error = new OAuthCustomError("Forbidden", e.getMessage());
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(error);
     }
 
     @ExceptionHandler(UnauthorizedException.class)
-    public ResponseEntity<OAuthCustomError> OAuthErrorUnauthorized(UnauthorizedException e, HttpServletRequest request){
+    public ResponseEntity<OAuthCustomError> OAuthErrorUnauthorized(UnauthorizedException e){
         OAuthCustomError error = new OAuthCustomError("Unauthorized", e.getMessage());
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
     }
